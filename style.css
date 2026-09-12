@@ -1502,7 +1502,19 @@ footer {
   .music-widget { right: 16px; bottom: 16px; }
 }
 
+.scroll-reveal {
+  opacity: 0;
+  translate: 0 28px;
+  transition: opacity .8s ease, translate .8s cubic-bezier(.22, 1, .36, 1), transform .25s ease, box-shadow .25s ease;
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  translate: 0 0;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; }
+  .scroll-reveal { opacity: 1; translate: none; }
 }

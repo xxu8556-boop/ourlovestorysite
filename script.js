@@ -68,3 +68,32 @@ musicAudio.play().catch(() => {
   document.addEventListener("click", startMusicAfterInteraction, { once: true });
   document.addEventListener("keydown", startMusicAfterInteraction, { once: true });
 });
+
+// Keep the story readable without JavaScript or when the visitor prefers less motion.
+if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const revealItems = document.querySelectorAll([
+    ".first-impression-copy", ".first-chat-card", ".heartache-photo", ".heartache-copy",
+    ".ambiguity-heading", ".ambiguity-story > *", ".different-chapter > *",
+    ".rational-chapter > *", ".protective-chapter > *", ".falling-chapter > *",
+    ".intro > *", ".timeline .moment", ".longing-copy", ".longing-chat",
+    ".after-us-heading", ".after-us-copy", ".after-us-photo",
+    ".distance-heading", ".distance-story", ".daily-message-intro",
+    ".distance-photo", ".distance-divider", ".memories .section-heading",
+    ".chat-card", ".promise > *"
+  ].join(","));
+
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-visible");
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.08, rootMargin: "0px 0px -6% 0px" });
+
+  revealItems.forEach((item) => {
+    // Don't hide content already on screen, including when opening a chapter link.
+    if (item.getBoundingClientRect().top < window.innerHeight * 0.9) return;
+    item.classList.add("scroll-reveal");
+    revealObserver.observe(item);
+  });
+}
