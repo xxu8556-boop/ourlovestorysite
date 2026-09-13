@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=mobile1">
+  <link rel="stylesheet" href="style.css?v=counter1">
 </head>
 <body>
   <header class="site-header">
@@ -28,10 +28,15 @@
         <p class="eyebrow">THE STORY OF US</p>
         <h1>我们的<i>故事</i></h1>
         <p class="hero-line">有些相遇很短，却足够让两颗心从此有了方向。</p>
-        <div class="together-card" aria-label="恋爱纪念日">
-          <span>我们已经相爱</span>
-          <strong id="daysTogether">—</strong>
-          <span>天</span>
+        <div class="together-card" id="loveCounter" role="timer" aria-live="off" aria-label="我们已经相爱的时间">
+          <span class="counter-kicker">我们已经相爱</span>
+          <div class="counter-time" aria-hidden="true">
+            <span><strong id="daysTogether">0</strong><small>天</small></span>
+            <span><strong id="hoursTogether">00</strong><small>时</small></span>
+            <span><strong id="minutesTogether">00</strong><small>分</small></span>
+            <span><strong id="secondsTogether">00</strong><small>秒</small></span>
+          </div>
+          <span class="counter-since">始于 2026.07.25 · 00:00</span>
         </div>
         <a class="scroll-link" href="#ambiguity">从心动开始读起 <span>↓</span></a>
       </div>
@@ -477,6 +482,6 @@
     <img src="" alt="放大的珍贵回忆">
   </dialog>
 
-  <script src="script.js?v=mobile1"></script>
+  <script src="script.js?v=counter1"></script>
 </body>
 </html>

@@ -1,9 +1,28 @@
-const togetherDate = new Date("2026-07-25T00:00:00+08:00");
-const now = new Date();
-const millisecondsPerDay = 1000 * 60 * 60 * 24;
-const daysTogether = Math.max(1, Math.floor((now - togetherDate) / millisecondsPerDay) + 1);
+const togetherDate = new Date("2026-07-25T00:00:00+08:00").getTime();
+const loveCounter = document.querySelector("#loveCounter");
+const counterParts = {
+  days: document.querySelector("#daysTogether"),
+  hours: document.querySelector("#hoursTogether"),
+  minutes: document.querySelector("#minutesTogether"),
+  seconds: document.querySelector("#secondsTogether")
+};
 
-document.querySelector("#daysTogether").textContent = daysTogether;
+function updateLoveCounter() {
+  const totalSeconds = Math.floor(Math.max(0, Date.now() - togetherDate) / 1000);
+  const days = Math.floor(totalSeconds / 86400);
+  const hours = Math.floor((totalSeconds % 86400) / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+
+  counterParts.days.textContent = days;
+  counterParts.hours.textContent = String(hours).padStart(2, "0");
+  counterParts.minutes.textContent = String(minutes).padStart(2, "0");
+  counterParts.seconds.textContent = String(seconds).padStart(2, "0");
+  loveCounter.setAttribute("aria-label", `我们已经相爱 ${days} 天 ${hours} 小时 ${minutes} 分 ${seconds} 秒`);
+}
+
+updateLoveCounter();
+window.setInterval(updateLoveCounter, 1000);
 
 const lightbox = document.querySelector("#lightbox");
 const lightboxImage = lightbox.querySelector("img");
