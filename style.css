@@ -158,11 +158,12 @@ h1 i {
 .first-impression-copy .section-number,
 .first-impression-copy .eyebrow { color: #e7bfc3; }
 
-.first-impression-lead,
-.first-impression-copy > p:last-child {
+.first-impression-copy > p:not(.section-number):not(.eyebrow) {
   color: #cdbfc0;
   line-height: 2;
 }
+
+.first-impression-copy > p + p { margin-top: 18px; }
 
 .first-impression-copy blockquote {
   margin: 34px 0;
