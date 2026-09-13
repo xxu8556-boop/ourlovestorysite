@@ -163,7 +163,7 @@ h1 i {
   line-height: 2;
 }
 
-.first-impression-copy > p + p { margin-top: 18px; }
+.first-impression-copy > p:not(.section-number):not(.eyebrow) + p:not(.section-number):not(.eyebrow) { margin-top: 18px; }
 
 .first-impression-copy blockquote {
   margin: 34px 0;
