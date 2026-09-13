@@ -71,7 +71,14 @@ musicAudio.play().catch(() => {
 
 // Keep the story readable without JavaScript or when the visitor prefers less motion.
 if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  const revealItems = document.querySelectorAll([
+  const isMobileStory = window.matchMedia("(max-width: 820px)").matches;
+  const revealSelectors = isMobileStory ? [
+    ".first-impression", ".heartache-chapter", ".ambiguity-heading", ".ambiguity-story",
+    ".different-chapter", ".rational-chapter", ".protective-chapter", ".falling-chapter",
+    ".intro", ".timeline .moment", ".longing", ".after-us-heading", ".after-us-story",
+    ".distance-heading", ".distance-grid", ".distance-divider", ".memories .section-heading",
+    ".chat-gallery", ".promise"
+  ] : [
     ".first-impression-copy", ".first-chat-card", ".heartache-photo", ".heartache-copy",
     ".ambiguity-heading", ".ambiguity-story > *", ".different-chapter > *",
     ".rational-chapter > *", ".protective-chapter > *", ".falling-chapter > *",
@@ -80,7 +87,8 @@ if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-mot
     ".distance-heading", ".distance-story", ".daily-message-intro",
     ".distance-photo", ".distance-divider", ".memories .section-heading",
     ".chat-card", ".promise > *"
-  ].join(","));
+  ];
+  const revealItems = document.querySelectorAll(revealSelectors.join(","));
 
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {

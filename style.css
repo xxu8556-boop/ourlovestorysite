@@ -1383,37 +1383,37 @@ footer {
   .polaroid { width: 245px; padding: 12px 12px 42px; }
   .polaroid img { height: 315px; }
   .intro { grid-template-columns: 1fr; gap: 10px; padding-top: 90px; }
-  .first-impression { grid-template-columns: 1fr; gap: 70px; margin-bottom: 120px; }
+  .first-impression { grid-template-columns: 1fr; gap: 32px; margin-bottom: 120px; }
   .first-impression-copy { max-width: 620px; margin: 0 auto; text-align: center; }
   .first-chat-collage { width: min(100%, 580px); margin: 0 auto; }
-  .heartache-chapter { grid-template-columns: 1fr; max-width: 620px; }
+  .heartache-chapter { grid-template-columns: 1fr; max-width: 620px; gap: 30px; }
   .heartache-photo { width: min(380px, 100%); justify-self: center; }
   .heartache-copy { text-align: center; }
   .heartache-copy blockquote { padding-left: 0; border-left: 0; }
-  .ambiguity-story { grid-template-columns: 1fr; gap: 44px; }
+  .ambiguity-story { grid-template-columns: 1fr; gap: 26px; }
   .ambiguity-photo.first, .ambiguity-photo.second { justify-self: center; transform: none; }
   .ambiguity-note { justify-self: center; text-align: center; }
   .ambiguity-story .first { order: 1; }
   .ambiguity-story .note-one { order: 2; }
   .ambiguity-story .note-two { order: 4; }
   .ambiguity-story .second { order: 3; }
-  .different-chapter, .rational-chapter, .protective-chapter, .falling-chapter { grid-template-columns: 1fr; }
+  .different-chapter, .rational-chapter, .protective-chapter, .falling-chapter { grid-template-columns: 1fr; gap: 32px; }
   .different-copy, .rational-copy, .protective-copy, .falling-copy { max-width: 650px; margin: 0 auto; text-align: center; }
   .different-copy blockquote, .rational-copy blockquote, .protective-copy blockquote, .falling-copy blockquote { padding-left: 0; border-left: 0; }
   .different-chats { width: min(100%, 620px); margin: 20px auto 0; }
   .rational-photo { width: min(400px, 100%); justify-self: center; }
   .protective-gallery { width: min(100%, 620px); margin: 20px auto 0; }
   .falling-photo { width: min(400px, 100%); justify-self: center; }
-  .longing { grid-template-columns: 1fr; gap: 70px; padding-block: 100px; }
+  .longing { grid-template-columns: 1fr; gap: 32px; padding-block: 100px; }
   .longing-copy { justify-self: center; text-align: center; }
   .longing-chats { justify-self: center; }
-  .after-us-story, .winter-story { grid-template-columns: 1fr; }
+  .after-us-story, .winter-story { grid-template-columns: 1fr; gap: 32px; }
   .after-us-copy { max-width: 650px; margin: 0 auto; text-align: center; }
   .after-us-copy blockquote { padding-left: 0; border-left: 0; }
   .choosing-photo { order: -1; }
   .after-us-photo-pair { width: min(100%, 680px); margin: 0 auto; }
   .distance { padding-block: 100px; }
-  .distance-grid, .unfinished-call, .little-crybaby { grid-template-columns: 1fr; }
+  .distance-grid, .unfinished-call, .little-crybaby { grid-template-columns: 1fr; gap: 32px; }
   .distance-story { max-width: 650px; margin: 0 auto; text-align: center; }
   .distance-story blockquote { padding-left: 0; border-left: 0; }
   .distance-photos { width: min(100%, 620px); justify-self: center; }
@@ -1441,42 +1441,42 @@ footer {
   .tape { right: 38px; top: 48px; }
   .intro, .timeline, .letter-section { width: calc(100% - 36px); }
   .ambiguity { padding-top: 100px; }
-  .first-chat-collage { grid-template-columns: 1fr; }
+  .first-chat-collage { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
   .first-chat-card { padding: 6px 6px 28px; }
-  .first-chat-card img { height: 520px; }
+  .first-chat-card img { height: min(48vh, 390px); object-fit: contain; background: #101010; }
   .collage-caption { font-size: 1.05rem; }
   .heartache-chapter { padding: 54px 18px; }
-  .heartache-photo img { height: 590px; }
+  .heartache-photo img { height: min(58vh, 500px); object-fit: contain; background: #101010; }
   .chapter-divider { margin-bottom: 100px; }
   .longing { padding-inline: 18px; }
   .longing-letter { padding: 34px 22px; text-align: left; }
-  .longing-chats { grid-template-columns: 1fr; }
+  .longing-chats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
   .longing-chat { padding: 6px 6px 32px; }
-  .longing-chat img { height: 520px; }
+  .longing-chat img { height: min(48vh, 390px); object-fit: contain; background: #101010; }
   .after-us { padding: 100px 18px; }
   .after-us-heading { margin-bottom: 70px; }
   .after-us-story + .after-us-story { margin-top: 84px; padding-top: 76px; }
-  .after-us-photo-pair { grid-template-columns: 1fr; }
+  .after-us-photo-pair { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
   .after-us-photo-pair button { width: min(100%, 390px); justify-self: center; }
   .after-us-photo img, .after-us-photo-pair img, .choosing-photo img { height: auto; max-height: 680px; }
   .distance { padding-inline: 18px; }
   .distance-heading { margin-bottom: 70px; }
   .distance-heading h2 br { display: none; }
-  .distance-photos { grid-template-columns: 1fr; }
+  .distance-photos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
   .distance-divider { margin-block: 72px; }
   .distance-photo { padding: 6px 6px 32px; }
   .soul-echo-photo img { height: auto; max-height: 620px; }
   .daily-message-pages { margin-top: 10px; padding-top: 52px; }
   .daily-message-intro { margin-bottom: 30px; }
-  .daily-message-photos { grid-template-columns: 1fr; }
-  .daily-message-photo { width: min(100%, 380px); justify-self: center; }
-  .daily-message-photo img { height: auto; background: #101010; }
+  .daily-message-photos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .daily-message-photo { width: 100%; justify-self: stretch; }
+  .daily-message-photo img { height: min(52vh, 430px); object-fit: contain; background: #101010; }
   .photo-wide img, .photo-small img { height: auto; max-height: 480px; }
-  .photo-tall img { height: 560px; }
+  .photo-tall img { height: min(52vh, 430px); object-fit: contain; background: #101010; }
   .photo-medium img { height: auto; max-height: 520px; }
   .photo-single img { height: auto; max-height: 620px; }
-  .ambiguity-photo img { height: 430px; }
-  .ambiguity-photo.second img { height: 390px; }
+  .ambiguity-photo img,
+  .ambiguity-photo.second img { height: min(56vh, 460px); object-fit: contain; background: #101010; }
   .different-chapter { margin-top: 110px; padding-top: 80px; }
   .different-chats { gap: 12px; }
   .different-chats button { padding: 5px 5px 22px; }
@@ -1484,7 +1484,7 @@ footer {
   .different-chats button:last-child { transform: none; }
   .different-chats img { height: 350px; }
   .rational-chapter { margin-top: 110px; padding: 40px 18px; }
-  .rational-photo img { height: 500px; }
+  .rational-photo img { height: min(56vh, 460px); object-fit: contain; background: #101010; }
   .protective-chapter { margin-top: 110px; padding-top: 80px; grid-template-columns: 1fr; }
   .protective-gallery { gap: 12px; }
   .protective-gallery button { padding: 5px 5px 22px; }
@@ -1492,7 +1492,7 @@ footer {
   .protective-gallery button:nth-child(odd),
   .protective-gallery button:nth-child(even) { transform: none; }
   .falling-chapter { margin-top: 110px; padding: 40px 18px; }
-  .falling-photo img { height: 540px; }
+  .falling-photo img { height: min(56vh, 460px); object-fit: contain; background: #101010; }
   .moment { grid-template-columns: 72px 34px 1fr; }
   .timeline::before { left: 88px; }
   .moment > div { padding-left: 10px; }
