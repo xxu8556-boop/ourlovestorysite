@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=counter1">
+  <link rel="stylesheet" href="style.css?v=ending1">
 </head>
 <body>
   <header class="site-header">
@@ -28,15 +28,15 @@
         <p class="eyebrow">THE STORY OF US</p>
         <h1>我们的<i>故事</i></h1>
         <p class="hero-line">有些相遇很短，却足够让两颗心从此有了方向。</p>
-        <div class="together-card" id="loveCounter" role="timer" aria-live="off" aria-label="我们已经相爱的时间">
-          <span class="counter-kicker">我们已经相爱</span>
+        <div class="together-card" id="loveCounter" role="timer" aria-live="off" aria-label="我们曾经相爱的时间">
+          <span class="counter-kicker">我们相爱过</span>
           <div class="counter-time" aria-hidden="true">
             <span><strong id="daysTogether">0</strong><small>天</small></span>
             <span><strong id="hoursTogether">00</strong><small>时</small></span>
             <span><strong id="minutesTogether">00</strong><small>分</small></span>
             <span><strong id="secondsTogether">00</strong><small>秒</small></span>
           </div>
-          <span class="counter-since">始于 2026.07.25</span>
+          <span class="counter-since">2026.07.25 — 2026.09.23</span>
         </div>
         <a class="scroll-link" href="#ambiguity">从心动开始读起 <span>↓</span></a>
       </div>
@@ -233,13 +233,13 @@
           <p>十二天后，我们在一起了。从这一天开始，快乐有了分享的人，想念也有了名字。</p>
         </div>
       </article>
-      <article class="moment is-future">
-        <time>FOREVER</time>
-        <span class="heart-dot" aria-hidden="true">♥</span>
+      <article class="moment is-ending">
+        <time datetime="2026-09-23">09.23</time>
+        <span class="heart-dot" aria-hidden="true">—</span>
         <div>
-          <p class="moment-label">故事还在继续</p>
-          <h3>以后还有好多好多天</h3>
-          <p>这里会慢慢装进我们的照片、旅行，以及每一个值得纪念的小日子。</p>
+          <p class="moment-label">故事停在这里</p>
+          <h3>我们分手了</h3>
+          <p>没有以后了。</p>
         </div>
       </article>
     </section>
@@ -270,7 +270,7 @@
       </div>
     </section>
 
-    <section class="after-us" aria-label="在一起以后的两篇小故事">
+    <section class="after-us" aria-label="在一起以后的一篇小故事">
       <div class="after-us-heading">
         <p class="eyebrow">AFTER WE BECAME US</p>
         <h2>后来，爱不再只是一个名字</h2>
@@ -293,27 +293,6 @@
         </button>
       </article>
 
-      <article class="after-us-story winter-story">
-        <div class="after-us-photo-pair" aria-label="关于冬天握手与亲吻的聊天记录">
-          <button class="after-us-photo" type="button" data-image="winter-touch-1.jpg" aria-label="放大你说冷的话就给我握手的聊天记录">
-            <img src="winter-touch-1.jpg" alt="你说如果我冷，就把手给我握" loading="lazy">
-            <span>冬天还在路上，你先把手心许给了我</span>
-          </button>
-          <button class="after-us-photo" type="button" data-image="winter-touch-2.jpg" aria-label="放大聊起见面后亲吻的聊天记录">
-            <img src="winter-touch-2.jpg" alt="两个人害羞地聊起见面以后的亲吻" loading="lazy">
-            <span>那个吻还没有落下，我们先为它红了脸</span>
-          </button>
-        </div>
-
-        <div class="after-us-copy">
-          <span class="after-us-label">冬天以前</span>
-          <h3>冬天尚远，你已经答应把手给我</h3>
-          <p>你说，冷的话就把手给你握。我故意说自己的手一到冬天就会肿成“猪蹄”，想看你会不会嫌弃。你没有躲，只是一遍遍说没事，说你不怕。</p>
-          <blockquote>“不过我应该不敢亲你嘴，应该是亲你脸。”<br>“没事，我敢。”</blockquote>
-          <p>后来，话题从牵手绕到了亲吻。我隔着屏幕笑了好久，嘴上还在逗你，心里却已经悄悄想象起见面的那一天。</p>
-          <p>那时冬天还没有来，我们也还隔着很远。可因为你说了一句“我敢”，风好像忽然就暖了——仿佛下一场雪落下以前，我真的能够握住你，也真的会在靠近你的那一刻红了脸。</p>
-        </div>
-      </article>
     </section>
 
     <section class="distance" id="distance">
@@ -455,10 +434,10 @@
       <p class="click-hint">点击照片，可以把回忆放大看看</p>
     </section>
 
-    <section class="promise">
-      <p>Our story is still being written.</p>
-      <h2>故事未完，爱意待续。</h2>
-      <span>只属于我们的故事</span>
+    <section class="ending" aria-label="故事的结尾">
+      <time datetime="2026-09-23">2026.09.23</time>
+      <h2>我们分手了。</h2>
+      <p>没有以后了。</p>
     </section>
   </main>
 
@@ -482,6 +461,6 @@
     <img src="" alt="放大的珍贵回忆">
   </dialog>
 
-  <script src="script.js?v=counter1"></script>
+  <script src="script.js?v=ending1"></script>
 </body>
 </html>

@@ -1204,7 +1204,9 @@ h2 {
 .moment-label { margin-bottom: 8px; color: var(--rose); font-family: var(--hand); font-size: 1.15rem; }
 .moment h3 { margin-bottom: 12px; font-size: 1.45rem; font-weight: 500; }
 .moment div > p:last-child { margin: 0; color: var(--muted); line-height: 1.9; }
-.is-future { opacity: .74; }
+.is-ending { opacity: .74; }
+.is-ending .heart-dot { color: #756b6d; }
+.is-ending .moment-label { color: #756b6d; }
 
 .memories {
   padding: 125px max(5vw, 24px) 140px;
@@ -1314,15 +1316,38 @@ h2 {
 .letter-heart { align-self: center; color: var(--rose); font-size: 3.2rem; }
 .letter-sign { align-self: flex-end; color: var(--rose-dark); font-size: 1.2rem; }
 
-.promise {
-  padding: 130px 24px;
+.ending {
+  min-height: 72vh;
+  padding: 150px 24px;
+  display: grid;
+  place-content: center;
+  gap: 18px;
   text-align: center;
-  background: #e8d3cf;
+  color: #d8d3d1;
+  background: #171719;
 }
 
-.promise p { color: var(--rose-dark); letter-spacing: .24em; font-size: .7rem; }
-.promise h2 { margin: 22px 0; font-family: var(--hand); font-size: clamp(3rem, 7vw, 6rem); color: var(--rose-dark); }
-.promise span { color: var(--muted); letter-spacing: .15em; }
+.ending time {
+  color: #777174;
+  letter-spacing: .22em;
+  font-size: .72rem;
+}
+
+.ending h2 {
+  margin: 18px 0 0;
+  font-family: var(--serif);
+  font-size: clamp(2.1rem, 5vw, 4.5rem);
+  font-weight: 400;
+  letter-spacing: .04em;
+}
+
+.ending p {
+  margin: 0;
+  color: #8f898c;
+  font-family: var(--serif);
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  letter-spacing: .16em;
+}
 
 footer {
   padding: 28px max(5vw, 24px);
