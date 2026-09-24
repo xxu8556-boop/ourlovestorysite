@@ -96,7 +96,7 @@ if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-mot
     ".different-chapter", ".rational-chapter", ".protective-chapter", ".falling-chapter",
     ".intro", ".timeline .moment", ".longing", ".after-us-heading", ".after-us-story",
     ".distance-heading", ".distance-grid", ".distance-divider", ".memories .section-heading",
-    ".chat-gallery", ".ending"
+    ".chat-gallery"
   ] : [
     ".first-impression-copy", ".first-chat-card", ".heartache-photo", ".heartache-copy",
     ".ambiguity-heading", ".ambiguity-story > *", ".different-chapter > *",
@@ -105,7 +105,7 @@ if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-mot
     ".after-us-heading", ".after-us-copy", ".after-us-photo",
     ".distance-heading", ".distance-story", ".daily-message-intro",
     ".distance-photo", ".distance-divider", ".memories .section-heading",
-    ".chat-card", ".ending > *"
+    ".chat-card"
   ];
   const revealItems = document.querySelectorAll(revealSelectors.join(","));
 
