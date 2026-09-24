@@ -726,6 +726,10 @@ h1 i {
   overflow: hidden;
 }
 
+.today-video-section {
+  border-top: 1px solid rgba(245, 217, 218, .1);
+}
+
 .after-us-heading {
   width: min(850px, 100%);
   margin: 0 auto 94px;
@@ -751,6 +755,22 @@ h1 i {
   margin-top: 120px;
   padding-top: 110px;
   border-top: 1px solid rgba(245, 217, 218, .16);
+}
+
+.after-us-video {
+  width: min(430px, 100%);
+  margin: 0;
+  justify-self: center;
+  padding: 8px;
+  background: #fff8f1;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, .34);
+}
+
+.after-us-video video {
+  display: block;
+  width: 100%;
+  max-height: 660px;
+  background: #101010;
 }
 
 .winter-story { grid-template-columns: minmax(420px, 1.12fr) minmax(0, .88fr); }
@@ -804,6 +824,9 @@ h1 i {
 
 .choosing-photo { max-width: 470px; justify-self: center; }
 .choosing-photo img { height: 720px; }
+
+.sleepy-photo { max-width: 550px; justify-self: center; padding: 8px; }
+.sleepy-photo img { height: auto; max-height: 620px; }
 
 .after-us-photo span,
 .after-us-photo-pair span {
@@ -1228,7 +1251,7 @@ h2 {
 .chat-card {
   cursor: zoom-in;
   appearance: none;
-  padding: 10px 10px 42px;
+  padding: 10px;
   border: 0;
   background: #f9f1e7;
   box-shadow: 0 24px 50px rgba(0, 0, 0, .25);
@@ -1239,11 +1262,9 @@ h2 {
 
 .chat-card:hover { transform: translateY(-8px) rotate(0); box-shadow: 0 34px 60px rgba(0, 0, 0, .32); }
 .chat-card img { width: 100%; height: 440px; object-fit: cover; object-position: top; }
-.chat-card span { display: block; padding-top: 12px; color: var(--rose-dark); font-family: var(--hand); font-size: 1.18rem; }
 .tilt-left { transform: rotate(-4deg); }
 .lift { transform: translateY(-20px); }
 .tilt-right { transform: rotate(4deg); }
-.click-hint { margin: 58px 0 0; text-align: center; color: #bfa9aa; font-size: .78rem; letter-spacing: .1em; }
 
 .letter-section {
   width: min(1050px, calc(100% - 48px));
@@ -1433,6 +1454,7 @@ footer {
   .longing-copy { justify-self: center; text-align: center; }
   .longing-chats { justify-self: center; }
   .after-us-story, .winter-story { grid-template-columns: 1fr; gap: 32px; }
+  .video-story .after-us-video { order: -1; }
   .after-us-copy { max-width: 650px; margin: 0 auto; text-align: center; }
   .after-us-copy blockquote { padding-left: 0; border-left: 0; }
   .choosing-photo { order: -1; }

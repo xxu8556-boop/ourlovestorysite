@@ -72,7 +72,12 @@ musicAudio.addEventListener("error", () => {
   musicLabel.textContent = "音乐加载失败";
 });
 
-async function startMusicAfterInteraction() {
+document.querySelectorAll(".story-video").forEach((video) => {
+  video.addEventListener("play", () => musicAudio.pause());
+});
+
+async function startMusicAfterInteraction(event) {
+  if (event.target instanceof Element && event.target.closest(".story-video")) return;
   if (!musicAudio.paused) return;
 
   try {
@@ -102,7 +107,7 @@ if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-mot
     ".ambiguity-heading", ".ambiguity-story > *", ".different-chapter > *",
     ".rational-chapter > *", ".protective-chapter > *", ".falling-chapter > *",
     ".intro > *", ".timeline .moment", ".longing-copy", ".longing-chat",
-    ".after-us-heading", ".after-us-copy", ".after-us-photo",
+    ".after-us-heading", ".after-us-copy", ".after-us-photo", ".after-us-video",
     ".distance-heading", ".distance-story", ".daily-message-intro",
     ".distance-photo", ".distance-divider", ".memories .section-heading",
     ".chat-card"
