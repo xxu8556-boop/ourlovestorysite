@@ -827,6 +827,8 @@ h1 i {
 
 .sleepy-photo { max-width: 550px; justify-self: center; padding: 8px; }
 .sleepy-photo img { height: auto; max-height: 620px; }
+.pushup-photo { max-width: 390px; justify-self: center; }
+.pushup-photo img { height: auto; max-height: none; }
 
 .after-us-photo span,
 .after-us-photo-pair span {
